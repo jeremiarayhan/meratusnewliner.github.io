@@ -1,0 +1,504 @@
+/* Edited CSS */
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    background: #f6fffd;
+    text-align: center;
+}
+
+.wrapper {
+    width: 370px;
+    height: 370px;
+    margin: 50px -50px;
+    perspective: 600px;
+    text-align: left;
+}
+
+.rec-prism {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 0.5s ease-in;
+}
+
+.face {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    padding: 20px;
+    background: rgba(250, 250, 250);
+    border: 0.5px solid #d5d5d5;
+    border-radius: 10px;
+}
+
+.face .content {
+    color: #424242;
+}
+
+.face .content h2 {
+    font-size: 14px;
+    color: #424242;
+    margin-top: 5px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.face .content .field-wrapper {
+    /* margin-top: 20px; */
+    position: relative;
+}
+
+.face .content .field-wrapper label {
+    position: relative;
+    pointer-events: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    margin-top: 15px;
+    /* identical to box height, or 22px */
+
+    /* black / 3 */
+    color: #424242;
+}
+
+/* 
+.face .content .field-wrapper input[type="text"],
+.face .content .field-wrapper input[type="password"],
+.face .content .field-wrapper input[type="submit"],
+.face .content .field-wrapper textarea {
+    -webkit-appearance: none;
+    appearance: none;
+} */
+
+.face .content .field-wrapper input[type="text"]:focus,
+.face .content .field-wrapper input[type="password"]:focus,
+.face .content .field-wrapper textarea:focus {
+    outline-color: #0985e375;
+}
+
+.face .content .field-wrapper input[type="text"]:hover,
+.face .content .field-wrapper input[type="password"]:hover,
+.face .content .field-wrapper textarea:hover {
+    background-color: #b7e0ff6e;
+}
+
+.face .content .field-wrapper input[type="text"],
+.face .content .field-wrapper input[type="password"],
+.face .content .field-wrapper textarea {
+    width: 330px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+
+    display: flex;
+
+
+    color: #4F4F4F;
+    box-sizing: border-box;
+    border: 0.1px solid #bcbcbc;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    /* Auto layout */
+
+
+    padding: 7.5px 35px;
+    gap: 8px;
+}
+
+/* 
+.face .content .field-wrapper input[type="text"]::-webkit-input-placeholder,
+.face .content .field-wrapper input[type="password"]::-webkit-input-placeholder,
+.face .content .field-wrapper textarea::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.face .content .field-wrapper input[type="text"]::-moz-placeholder,
+.face .content .field-wrapper input[type="password"]::-moz-placeholder,
+.face .content .field-wrapper textarea::-moz-placeholder {
+    opacity: 0;
+}
+
+.face .content .field-wrapper input[type="text"]:-ms-input-placeholder,
+.face .content .field-wrapper input[type="password"]:-ms-input-placeholder,
+.face .content .field-wrapper textarea:-ms-input-placeholder {
+    opacity: 0;
+} */
+
+/* .face .content .field-wrapper input[type="text"]:-moz-placeholder,
+.face .content .field-wrapper input[type="password"]:-moz-placeholder,
+.face .content .field-wrapper textarea:-moz-placeholder {
+    opacity: 0;
+} */
+
+/* .face .content .field-wrapper input[type="text"]:focus+label,
+.face .content .field-wrapper input[type="password"]:focus+label,
+.face .content .field-wrapper textarea:focus+label,
+.face .content .field-wrapper input[type="text"]:not(:placeholder-shown)+label,
+.face .content .field-wrapper input[type="password"]:not(:placeholder-shown)+label,
+.face .content .field-wrapper textarea:not(:placeholder-shown)+label {
+    top: -35%;
+    color: #42509e;
+} */
+
+.face .content .field-wrapper input[type="submit"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    background: #07ad90;
+    line-height: 2em;
+    color: #fff;
+    border: 1px solid #07ad90;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+/* .face .content .field-wrapper input[type="submit"]:hover {
+    opacity: 0;
+} */
+
+.face .content .field-wrapper input[type="submit"]:active {
+    transform: scale(0.96);
+}
+
+
+
+.face .content .field-wrapper textarea {
+    resize: none;
+    line-height: 1em;
+}
+
+/* .face .content .field-wrapper textarea:focus+label,
+.face .content .field-wrapper textarea:not(:placeholder-shown)+label {
+    top: -25%;
+} */
+
+
+
+.face-front {
+    transform: rotateY(0deg) translateZ(185px);
+}
+
+.face-top {
+
+    transform: rotateX(90deg) translateZ(185px);
+}
+
+.face-back {
+    transform: rotateY(180deg) translateZ(185px);
+}
+
+.face-right {
+    transform: rotateY(90deg) translateZ(185px);
+}
+
+.face-left {
+    transform: rotateY(-90deg) translateZ(185px);
+}
+
+.face-bottom {
+
+    transform: rotateX(-90deg) translateZ(185px);
+}
+
+.back-btn {
+    color: #a3a3a3;
+}
+
+.psw {
+    display: block;
+    font-size: 13px;
+    align-items: center;
+    color: #42509e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.psw:hover {
+    color: #42509e7f;
+}
+
+
+.login {
+    position: relative;
+    height: 100vh;
+}
+
+/* .row{
+    height: 100vh;
+} */
+
+/* .col-6{
+    width: 80vw;
+} */
+.header img {
+    width: 200px;
+    height: 30px;
+    margin-right: 20vw;
+}
+
+.header p {
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+
+
+    color: #4F4F4F;
+
+
+}
+
+.login-form label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+    display: flex;
+    align-items: center;
+
+    /* black / 3 */
+    color: #424242;
+
+
+
+}
+
+.username {
+    background: url(assets/username.svg) no-repeat scroll 7px 7px;
+    /* padding-left: 50px; */
+}
+
+.password {
+    background: url(assets/password.svg) no-repeat scroll 7px 7px;
+    /* padding-left: 50px; */
+}
+
+.login-form input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+
+    display: flex;
+    align-items: center;
+
+    color: #4F4F4F;
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 35px;
+    gap: 8px;
+
+    /* width: 518.79px; */
+    /* height: 47.07px; */
+
+    border-radius: 6.41798px;
+    transition: 0.3s;
+}
+
+.text-center {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    justify-content: center;
+    /* width: 518.79px; */
+    line-height: 150%;
+    /* or 22px */
+    /* Blue */
+
+    color: #405DC5;
+}
+
+.login-form .btn-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 26px;
+    color: #FFFFFF;
+    width: 330px;
+    font-size: 13px;
+    /* height: 45.81px; */
+
+    /* Gradient / 1 */
+
+    background: linear-gradient(270deg, #BC82F7 0%, #0984E3 100%);
+    box-shadow: 0px 5.34831px 26.7416px 5.34831px rgba(29, 161, 242, 0.15);
+    border-radius: 7.8px;
+    border: 0.5px;
+
+    /* Inside auto layout */
+    margin-top: 15px;
+    flex: auto;
+    order: 0;
+    flex-grow: 0;
+    transition: 0.3s;
+
+}
+
+.btn-login:active {
+    transform: scale(0.96);
+}
+
+.btn-login:hover {
+    box-shadow: 0px 5px 20px 5px rgba(29, 161, 242, 0.4);
+}
+
+
+.login-form .btn-login-microsoft {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 27px;
+    gap: 10.7px;
+
+    width: 330px;
+    font-size: 13px;
+    /* height: 51.34px; */
+
+    border: 1.06966px solid rgba(64, 93, 197, 0.5);
+    border-radius: 8.34337px;
+    background-color: #FFFFFF;
+
+    transition: 0.3s;
+}
+
+.btn-login-microsoft:active {
+    transform: scale(0.96);
+}
+
+.btn-login-microsoft:hover {
+    background-color: #b7e0ff6e;
+    transition: 0.3s;
+}
+
+
+.hr-lines:before {
+    content: " ";
+    display: block;
+    height: 2px;
+    width: 140px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #D3D3D3;
+}
+
+.hr-lines {
+    position: relative;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 2px;
+    width: 140px;
+    background: #D3D3D3;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.carousel-item img {
+    height: 100vh;
+}
+
+.carousel-caption {
+    padding: 30px;
+    position: absolute;
+    height: 300px;
+    width: 450px;
+    background: linear-gradient(138.2deg, rgba(255, 255, 255, 0.06) 12.55%, rgba(255, 255, 255, 0.1) 95.98%);
+    backdrop-filter: blur(10px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 20px;
+}
+
+.carousel-caption h2 {
+    text-align: start;
+}
+
+.carousel-caption p {
+    text-align: start;
+    font-size: 13px;
+}
+
+.carousel-item hr {
+    width: 10vw;
+    height: 7px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+}
+
+.carousel-btn .active{
+    box-sizing: content-box;
+    width: 25px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transition: opacity .6s ease;
+    border-radius: 100%;
+}
+
+@-webkit-keyframes success {
+    from {
+        -webkit-transform: translate(-50%, -50%) rotate(0) scale(0);
+    }
+
+    to {
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+    }
+}
